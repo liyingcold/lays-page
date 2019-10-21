@@ -12,6 +12,7 @@
     <!-- 使用代码配置动态路由  -->
     <button @click="profileClick()">档案</button>
 
+    <router-link to="/home/promise">promise</router-link>    
     <keep-alive>
       <router-view/>
     </keep-alive>

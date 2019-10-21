@@ -43,6 +43,13 @@ const router=new Router({
           meta:{
             title:'档案'
           }
+        },
+        {
+          path:'promise',
+          component:()=>import('../components/Promise'),
+          meta:{
+            title:'es6'
+          }
         }
       ],
       meta:{
@@ -59,9 +66,11 @@ router.beforeEach((to,from,next)=>{
   console.log(to,from)
   console.log(document.title)
   console.log(to.meta.title)
-
   next()
- 
+})
+
+/* 后置钩子，跳转后回调*/
+router.afterEach(()=>{
   
 })
 
