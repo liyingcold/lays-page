@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <hr>
     <router-link to="/home/news" tag="button">新闻</router-link>
     <router-link to="/home/message">消息</router-link>
     <!-- 参数传递 方式一 -->
@@ -26,7 +27,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      msg: 'home组件',
       userId:'muzi'
       
     }
@@ -63,5 +64,8 @@ li {
 }
 a {
   color: #42b983;
+}
+hr{
+  width:95%;
 }
 </style>

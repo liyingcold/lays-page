@@ -1,7 +1,7 @@
 <!--  -->
 <template>
     <div>
-        <hr>
+        <br>
         <button @click="promise()" >我是promise，只有一个请求</button>
         <button @click="promiseAll()" >我是promise，有多个请求</button>
     </div>
@@ -124,4 +124,5 @@ li {
 a {
   color: #42b983;
 }
+
 </style>

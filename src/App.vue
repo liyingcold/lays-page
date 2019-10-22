@@ -1,12 +1,25 @@
 <template>
   <div id="app">
-    <router-view/>
+      <h2>{{message}}</h2>
+      <hr>
+    <!-- <router-view/> -->
+    <hello-vuex/>
+    
   </div>
 </template>
 
 <script>
+import HelloVuex from './components/vuex/HelloVuex'
 export default {
-  name: 'App'
+  name: 'App',
+  data() {
+    return {
+      message:'app组件'
+    }
+  },
+  components:{
+    HelloVuex
+  }
 }
 </script>
 
