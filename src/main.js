@@ -74,14 +74,28 @@ new Vue({
 // 导入
 import {request} from './network/request';
 
+// 方式一
+// request({
+//   url:'/weather/lifestyle',
+//   params:{
+//     location:'beijing',
+//     key:'46a723541ce941e9ae69efaad9a9e8a5'
+//         }
+//       },res=>{
+//         console.log(res);
+//       },err=>{
+//         console.log(err);
+//       })
+
+// promise方式
 request({
   url:'/weather/lifestyle',
   params:{
     location:'beijing',
     key:'46a723541ce941e9ae69efaad9a9e8a5'
         }
-      },res=>{
-        console.log(res);
-      },err=>{
-        console.log(err);
-      })
+}).then(res=>{
+  console.log(res)
+}).catch(err=>{
+  console.log(err)
+})
